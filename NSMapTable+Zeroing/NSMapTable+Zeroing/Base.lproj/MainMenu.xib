@@ -683,12 +683,10 @@
                             <font key="font" metaFont="system"/>
                             <menu key="menu" title="OtherViews" id="hyb-Mp-nX9">
                                 <items>
-                                    <menuItem title="Strong to weak" tag="1" id="MFK-zx-a2A">
-                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                    </menuItem>
-                                    <menuItem title="Weak to strong" tag="2" id="pOf-FW-HVY"/>
-                                    <menuItem title="Weak to weak" tag="3" id="eNh-k4-dUr"/>
-                                    <menuItem title="Strong to strong" state="on" tag="4" id="eIm-NT-l5m"/>
+                                    <menuItem title="Strong to weak" tag="1" keyEquivalent="1" id="MFK-zx-a2A"/>
+                                    <menuItem title="Weak to strong" tag="2" keyEquivalent="2" id="pOf-FW-HVY"/>
+                                    <menuItem title="Weak to weak" tag="3" keyEquivalent="3" id="eNh-k4-dUr"/>
+                                    <menuItem title="Strong to strong" state="on" tag="4" keyEquivalent="4" id="eIm-NT-l5m"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>
@@ -697,7 +695,7 @@
                         </connections>
                     </popUpButton>
                     <textField toolTip="Markers created since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="wCJ-T4-lWA">
-                        <rect key="frame" x="267" y="197" width="58" height="17"/>
+                        <rect key="frame" x="267" y="194" width="58" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Created:" id="Ypf-1Q-eSB">
                             <font key="font" metaFont="system"/>
@@ -706,7 +704,7 @@
                         </textFieldCell>
                     </textField>
                     <textField toolTip="Markers not deallocated yet." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ccq-5k-W4W">
-                        <rect key="frame" x="267" y="172" width="60" height="17"/>
+                        <rect key="frame" x="267" y="169" width="60" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Still Live:" id="qd7-ES-p2H">
                             <font key="font" metaFont="system"/>
@@ -715,7 +713,7 @@
                         </textFieldCell>
                     </textField>
                     <textField toolTip="Markers deallocated since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="oyN-fQ-Vv8">
-                        <rect key="frame" x="267" y="147" width="82" height="17"/>
+                        <rect key="frame" x="267" y="144" width="82" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Deallocated:" id="sD5-zv-DCB">
                             <font key="font" metaFont="system"/>
@@ -724,7 +722,7 @@
                         </textFieldCell>
                     </textField>
                     <textField toolTip="Markers not deallocated yet." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="BhA-Eu-4Ri">
-                        <rect key="frame" x="353" y="172" width="96" height="17"/>
+                        <rect key="frame" x="353" y="169" width="96" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="g60-h0-x4l">
                             <font key="font" metaFont="system"/>
@@ -733,7 +731,7 @@
                         </textFieldCell>
                     </textField>
                     <textField toolTip="Markers deallocated since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="tCS-Go-Aiy">
-                        <rect key="frame" x="353" y="147" width="96" height="17"/>
+                        <rect key="frame" x="353" y="144" width="96" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="wxi-yj-7HK">
                             <font key="font" metaFont="system"/>
@@ -756,7 +754,7 @@ DQ
                         </connections>
                     </button>
                     <textField toolTip="Markers created since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="aTG-iM-jMf">
-                        <rect key="frame" x="353" y="197" width="96" height="17"/>
+                        <rect key="frame" x="353" y="194" width="96" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="XVo-dd-UK4">
                             <font key="font" metaFont="system"/>
@@ -764,17 +762,6 @@ DQ
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button toolTip="Create a new map table and resets all values." verticalHuggingPriority="750" id="2ux-8y-9JR">
-                        <rect key="frame" x="13" y="46" width="101" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="Reset All" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EFo-PM-7gE">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="resetMapTable:" target="494" id="Sb3-FO-1kq"/>
-                        </connections>
-                    </button>
                     <textField toolTip="Create a new map table and resets all values." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ucd-y0-HoK">
                         <rect key="frame" x="17" y="275" width="114" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -785,7 +772,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField toolTip="mapTable.keyEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="D8f-kE-cTe">
-                        <rect key="frame" x="18" y="172" width="73" height="17"/>
+                        <rect key="frame" x="18" y="169" width="73" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Key Count:" id="3Tk-tV-eUW">
                             <font key="font" metaFont="system"/>
@@ -794,7 +781,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField toolTip="mapTable.ObjectEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="q3U-A5-evc">
-                        <rect key="frame" x="18" y="147" width="92" height="17"/>
+                        <rect key="frame" x="18" y="144" width="92" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Object Count:" id="lMR-qD-tAr">
                             <font key="font" metaFont="system"/>
@@ -803,7 +790,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField toolTip="mapTable.keyEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ZhT-sa-Z5f">
-                        <rect key="frame" x="114" y="172" width="66" height="17"/>
+                        <rect key="frame" x="114" y="169" width="66" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="mQf-JJ-BPP">
                             <font key="font" metaFont="system"/>
@@ -812,7 +799,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField toolTip="mapTable.ObjectEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="u9i-x1-A52">
-                        <rect key="frame" x="114" y="147" width="66" height="17"/>
+                        <rect key="frame" x="114" y="144" width="66" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="3ng-Ir-zDr">
                             <font key="font" metaFont="system"/>
@@ -821,7 +808,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField toolTip="mapTable.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bMz-u0-oZc">
-                        <rect key="frame" x="114" y="197" width="66" height="17"/>
+                        <rect key="frame" x="114" y="194" width="66" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="ek9-gP-VzA">
                             <font key="font" metaFont="system"/>
@@ -830,7 +817,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField toolTip="mapTable.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Sfp-84-KPl">
-                        <rect key="frame" x="18" y="197" width="47" height="17"/>
+                        <rect key="frame" x="18" y="194" width="47" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Count:" id="uIf-Mn-WEn">
                             <font key="font" metaFont="system"/>
@@ -839,7 +826,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="nm3-RI-FDS">
-                        <rect key="frame" x="17" y="222" width="134" height="17"/>
+                        <rect key="frame" x="17" y="219" width="134" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Map Table Content:" id="qpU-Vj-Gw7">
                             <font key="font" metaFont="systemBold"/>
@@ -848,7 +835,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField toolTip="Markers are instances used as keys and objects of the map table, for which we keep track of initializations and deallocations." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="nFu-aX-d6d">
-                        <rect key="frame" x="267" y="222" width="62" height="17"/>
+                        <rect key="frame" x="267" y="219" width="62" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Markers:" id="ehS-hg-0AB">
                             <font key="font" metaFont="systemBold"/>
@@ -856,28 +843,41 @@ DQ
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button toolTip="Using `removeObjectForKey:` on markers known to still be alive. This makes most sense for map tables with strong keys." verticalHuggingPriority="750" id="tSu-jD-jdB">
-                        <rect key="frame" x="13" y="13" width="192" height="32"/>
+                    <popUpButton toolTip="Create a new map table and resets all values." verticalHuggingPriority="750" id="GpJ-g8-SjN">
+                        <rect key="frame" x="17" y="17" width="241" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="Try to Remove Live Keys" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1aC-YC-cVi">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <popUpButtonCell key="cell" type="push" title="Reset all" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="3" imageScaling="proportionallyDown" inset="2" selectedItem="c7e-XI-edL" id="qAQ-qB-RGI">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
-                        </buttonCell>
+                            <menu key="menu" title="OtherViews" id="gBz-Re-WPJ">
+                                <items>
+                                    <menuItem title="Reset all" state="on" tag="3" keyEquivalent="r" toolTip="Replace NSMapTable instance with a new one and reset marker count values" id="c7e-XI-edL">
+                                        <connections>
+                                            <action selector="resetAll:" target="494" id="Xes-8P-It8"/>
+                                        </connections>
+                                    </menuItem>
+                                    <menuItem title="Replace map table with new one" tag="1" keyEquivalent="n" toolTip="Replace NSMapTable instance with a new one, so the old one is deallocated" id="BRt-uk-fRG">
+                                        <connections>
+                                            <action selector="mapTableReplace:" target="494" id="SPB-Lk-fVs"/>
+                                        </connections>
+                                    </menuItem>
+                                    <menuItem title="Remove all objects from map table" tag="2" keyEquivalent="m" toolTip="[mapTable removeAllObjects]" id="VuH-0Q-T0O">
+                                        <connections>
+                                            <action selector="mapTableRemoveAllObjects:" target="494" id="sPG-Yl-3X3"/>
+                                        </connections>
+                                    </menuItem>
+                                    <menuItem title="Remove objects for live keys" tag="3" keyEquivalent="k" toolTip="[mapTable removeObject:forKey:]" id="7NY-1b-3Eq">
+                                        <connections>
+                                            <action selector="mapTableRemoveObjectsForLiveKeys:" target="494" id="9ik-5B-oSH"/>
+                                        </connections>
+                                    </menuItem>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
                         <connections>
-                            <action selector="tryToRemoveLiveKeys:" target="494" id="MDs-eb-aPu"/>
+                            <action selector="changeTypeOfMapTable:" target="494" id="nnN-e6-39g"/>
                         </connections>
-                    </button>
-                    <button toolTip="Create a new map table and resets all values." verticalHuggingPriority="750" id="SLt-OS-Qku">
-                        <rect key="frame" x="13" y="79" width="101" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fwd-Sd-Aoo">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="refresh:" target="494" id="Z3w-ef-0vF"/>
-                        </connections>
-                    </button>
+                    </popUpButton>
                 </subviews>
             </view>
         </window>

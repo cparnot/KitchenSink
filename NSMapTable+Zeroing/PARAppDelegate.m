@@ -83,7 +83,7 @@ static NSHashTable *liveMarkers = nil;
 
 - (void)awakeFromNib
 {
-    [self resetMapTable:self];
+    [self resetAll:self];
 }
 
 - (void)refreshUI
@@ -113,19 +113,24 @@ static NSHashTable *liveMarkers = nil;
         self.mapTable = [NSMapTable strongToStrongObjectsMapTable];
 
     self.mapTableType = type;
-    countTotal = 0;
-    countDeallocated = 0;
     
     [self refreshUI];
 }
 
-- (IBAction)resetMapTable:(id)sender
+- (IBAction)mapTableReplace:(id)sender
 {
     self.mapTableType = 0;
     [self changeTypeOfMapTable:self.mapTableTypeButton];
+    [self refreshUI];
 }
 
-- (IBAction)tryToRemoveLiveKeys:(id)sender
+- (IBAction)mapTableRemoveAllObjects:(id)sender
+{
+    [self.mapTable removeAllObjects];
+    [self refreshUI];
+}
+
+- (IBAction)mapTableRemoveObjectsForLiveKeys:(id)sender
 {
     // using liveMarkers.allObjects to keep them alive until done
     @autoreleasepool
@@ -136,6 +141,13 @@ static NSHashTable *liveMarkers = nil;
         }
     }
     [self refreshUI];
+}
+
+- (IBAction)resetAll:(id)sender
+{
+    [self mapTableReplace:self];
+    countTotal = 0;
+    countDeallocated = 0;
 }
 
 - (IBAction)addEntriesToMapTable:(id)sender
