@@ -667,9 +667,9 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="apy-6W-Rgx">
-                        <rect key="frame" x="249" y="56" width="100" height="17"/>
+                        <rect key="frame" x="252" y="56" width="96" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Objects to add:" id="D4J-ak-SsZ">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Entries to add:" id="D4J-ak-SsZ">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -744,7 +744,7 @@
                     <button toolTip="Add new autoreleased markers as keys and objects to the current map table." verticalHuggingPriority="750" id="wjo-6t-XjY">
                         <rect key="frame" x="318" y="13" width="148" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="Add Objects" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dkg-cI-csi">
+                        <buttonCell key="cell" type="push" title="Add Entries" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dkg-cI-csi">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
@@ -752,7 +752,7 @@ DQ
 </string>
                         </buttonCell>
                         <connections>
-                            <action selector="addObjectsToMapTable:" target="494" id="8cH-Jd-w38"/>
+                            <action selector="addEntriesToMapTable:" target="494" id="3Fs-YE-vbF"/>
                         </connections>
                     </button>
                     <textField toolTip="Markers created since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="aTG-iM-jMf">
@@ -867,6 +867,17 @@ DQ
                             <action selector="tryToRemoveLiveKeys:" target="494" id="MDs-eb-aPu"/>
                         </connections>
                     </button>
+                    <button toolTip="Create a new map table and resets all values." verticalHuggingPriority="750" id="SLt-OS-Qku">
+                        <rect key="frame" x="13" y="79" width="101" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fwd-Sd-Aoo">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="refresh:" target="494" id="Z3w-ef-0vF"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>
@@ -875,11 +886,11 @@ DQ
                 <outlet property="countField" destination="bMz-u0-oZc" id="sEu-Ga-gD3"/>
                 <outlet property="createdField" destination="aTG-iM-jMf" id="RXZ-z5-g3e"/>
                 <outlet property="deallocatedField" destination="tCS-Go-Aiy" id="5uO-iV-rcg"/>
+                <outlet property="entriesToAddField" destination="P2y-ki-78R" id="La4-ka-TB4"/>
                 <outlet property="keyCountField" destination="ZhT-sa-Z5f" id="uZ7-Bv-aMl"/>
                 <outlet property="liveField" destination="BhA-Eu-4Ri" id="iJ2-A5-TQB"/>
                 <outlet property="mapTableTypeButton" destination="Tz5-UR-Rom" id="xBo-lg-bUn"/>
                 <outlet property="objectCountField" destination="u9i-x1-A52" id="VIs-mT-ftD"/>
-                <outlet property="objectsToAddField" destination="P2y-ki-78R" id="WGi-kt-UhW"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>

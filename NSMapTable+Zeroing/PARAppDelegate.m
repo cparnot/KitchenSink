@@ -20,6 +20,8 @@ static NSHashTable *liveMarkers = nil;
 
 - (id)init
 {
+    NSAssert([NSThread currentThread] == [NSThread mainThread], @"Not on the main thread");
+    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^
     {
@@ -38,6 +40,7 @@ static NSHashTable *liveMarkers = nil;
 
 - (void)dealloc
 {
+    NSAssert([NSThread currentThread] == [NSThread mainThread], @"Not on the main thread");
     countDeallocated ++;
 }
 
@@ -64,7 +67,7 @@ static NSHashTable *liveMarkers = nil;
 @property (weak, nonatomic) IBOutlet NSTextField *liveField;
 @property (weak, nonatomic) IBOutlet NSTextField *deallocatedField;
 
-@property (weak, nonatomic) IBOutlet NSTextField *objectsToAddField;
+@property (weak, nonatomic) IBOutlet NSTextField *entriesToAddField;
 
 
 @end
@@ -135,11 +138,11 @@ static NSHashTable *liveMarkers = nil;
     [self refreshUI];
 }
 
-- (IBAction)addObjectsToMapTable:(id)sender
+- (IBAction)addEntriesToMapTable:(id)sender
 {
     @autoreleasepool
     {
-        NSUInteger addCount = [self.objectsToAddField.stringValue integerValue];
+        NSUInteger addCount = [self.entriesToAddField.stringValue integerValue];
         for (NSUInteger i = 0; i < addCount; i++)
         {
             PARMarker *key = [[PARMarker alloc] init];
@@ -147,6 +150,11 @@ static NSHashTable *liveMarkers = nil;
             [self.mapTable setObject:object forKey:key];
         }
     }
+    [self refreshUI];
+}
+
+- (IBAction)refresh:(id)sender
+{
     [self refreshUI];
 }
 
