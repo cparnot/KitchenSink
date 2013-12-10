@@ -11,13 +11,13 @@
 		5685E8F01857136B00BE907B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5685E8EE1857136B00BE907B /* InfoPlist.strings */; };
 		5685E8F21857136B00BE907B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5685E8F11857136B00BE907B /* main.m */; };
 		5685E8F61857136B00BE907B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5685E8F41857136B00BE907B /* Credits.rtf */; };
-		5685E8F91857136B00BE907B /* PARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5685E8F81857136B00BE907B /* PARAppDelegate.m */; };
 		5685E8FC1857136B00BE907B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5685E8FA1857136B00BE907B /* MainMenu.xib */; };
 		5685E8FE1857136B00BE907B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5685E8FD1857136B00BE907B /* Images.xcassets */; };
 		5685E9051857136B00BE907B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5685E9041857136B00BE907B /* XCTest.framework */; };
 		5685E9061857136B00BE907B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5685E8E51857136B00BE907B /* Cocoa.framework */; };
 		5685E90E1857136B00BE907B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5685E90C1857136B00BE907B /* InfoPlist.strings */; };
 		5685E9101857136B00BE907B /* NSMapTable_ZeroingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5685E90F1857136B00BE907B /* NSMapTable_ZeroingTests.m */; };
+		5685E91C18573CB100BE907B /* PARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5685E91B18573CB100BE907B /* PARAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,6 @@
 		5685E8F11857136B00BE907B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5685E8F31857136B00BE907B /* NSMapTable+Zeroing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMapTable+Zeroing-Prefix.pch"; sourceTree = "<group>"; };
 		5685E8F51857136B00BE907B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		5685E8F71857136B00BE907B /* PARAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PARAppDelegate.h; sourceTree = "<group>"; };
-		5685E8F81857136B00BE907B /* PARAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PARAppDelegate.m; sourceTree = "<group>"; };
 		5685E8FB1857136B00BE907B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5685E8FD1857136B00BE907B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5685E9031857136B00BE907B /* NSMapTable+ZeroingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSMapTable+ZeroingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +48,8 @@
 		5685E90B1857136B00BE907B /* NSMapTable+ZeroingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSMapTable+ZeroingTests-Info.plist"; sourceTree = "<group>"; };
 		5685E90D1857136B00BE907B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5685E90F1857136B00BE907B /* NSMapTable_ZeroingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSMapTable_ZeroingTests.m; sourceTree = "<group>"; };
+		5685E91A18573CB100BE907B /* PARAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PARAppDelegate.h; sourceTree = "<group>"; };
+		5685E91B18573CB100BE907B /* PARAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PARAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,9 @@
 		5685E8D91857136B00BE907B = {
 			isa = PBXGroup;
 			children = (
-				5685E8EB1857136B00BE907B /* NSMapTable+Zeroing */,
+				5685E91A18573CB100BE907B /* PARAppDelegate.h */,
+				5685E91B18573CB100BE907B /* PARAppDelegate.m */,
+				5685E8EB1857136B00BE907B /* App */,
 				5685E9091857136B00BE907B /* NSMapTable+ZeroingTests */,
 				5685E8E41857136B00BE907B /* Frameworks */,
 				5685E8E31857136B00BE907B /* Products */,
@@ -112,15 +114,14 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		5685E8EB1857136B00BE907B /* NSMapTable+Zeroing */ = {
+		5685E8EB1857136B00BE907B /* App */ = {
 			isa = PBXGroup;
 			children = (
-				5685E8F71857136B00BE907B /* PARAppDelegate.h */,
-				5685E8F81857136B00BE907B /* PARAppDelegate.m */,
 				5685E8FA1857136B00BE907B /* MainMenu.xib */,
 				5685E8FD1857136B00BE907B /* Images.xcassets */,
 				5685E8EC1857136B00BE907B /* Supporting Files */,
 			);
+			name = App;
 			path = "NSMapTable+Zeroing";
 			sourceTree = "<group>";
 		};
@@ -252,7 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5685E8F91857136B00BE907B /* PARAppDelegate.m in Sources */,
+				5685E91C18573CB100BE907B /* PARAppDelegate.m in Sources */,
 				5685E8F21857136B00BE907B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
