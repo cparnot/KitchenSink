@@ -148,6 +148,7 @@ static NSHashTable *liveMarkers = nil;
     [self mapTableReplace:self];
     countTotal = 0;
     countDeallocated = 0;
+    [self refreshUI];
 }
 
 - (IBAction)addEntriesToMapTable:(id)sender
