@@ -680,7 +680,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="push" title="Strong to strong" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="4" imageScaling="proportionallyDown" inset="2" selectedItem="eIm-NT-l5m" id="lZW-PR-b6v">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="menu"/>
                             <menu key="menu" title="OtherViews" id="hyb-Mp-nX9">
                                 <items>
                                     <menuItem title="Strong to weak" tag="1" keyEquivalent="1" id="MFK-zx-a2A"/>
@@ -772,7 +772,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField toolTip="mapTable.keyEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="D8f-kE-cTe">
-                        <rect key="frame" x="18" y="169" width="73" height="17"/>
+                        <rect key="frame" x="18" y="144" width="73" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Key Count:" id="3Tk-tV-eUW">
                             <font key="font" metaFont="system"/>
@@ -781,7 +781,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField toolTip="mapTable.ObjectEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="q3U-A5-evc">
-                        <rect key="frame" x="18" y="144" width="92" height="17"/>
+                        <rect key="frame" x="18" y="119" width="92" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Object Count:" id="lMR-qD-tAr">
                             <font key="font" metaFont="system"/>
@@ -790,7 +790,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField toolTip="mapTable.keyEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ZhT-sa-Z5f">
-                        <rect key="frame" x="114" y="169" width="66" height="17"/>
+                        <rect key="frame" x="114" y="144" width="66" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="mQf-JJ-BPP">
                             <font key="font" metaFont="system"/>
@@ -799,7 +799,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField toolTip="mapTable.ObjectEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="u9i-x1-A52">
-                        <rect key="frame" x="114" y="144" width="66" height="17"/>
+                        <rect key="frame" x="114" y="119" width="66" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="3ng-Ir-zDr">
                             <font key="font" metaFont="system"/>
@@ -808,7 +808,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField toolTip="mapTable.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bMz-u0-oZc">
-                        <rect key="frame" x="114" y="194" width="66" height="17"/>
+                        <rect key="frame" x="114" y="169" width="66" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="ek9-gP-VzA">
                             <font key="font" metaFont="system"/>
@@ -817,9 +817,9 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField toolTip="mapTable.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Sfp-84-KPl">
-                        <rect key="frame" x="18" y="194" width="47" height="17"/>
+                        <rect key="frame" x="18" y="169" width="83" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Count:" id="uIf-Mn-WEn">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Entry Count:" id="uIf-Mn-WEn">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -848,7 +848,7 @@ DQ
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <popUpButtonCell key="cell" type="push" title="Reset all" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="3" imageScaling="proportionallyDown" inset="2" selectedItem="c7e-XI-edL" id="qAQ-qB-RGI">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="menu"/>
                             <menu key="menu" title="OtherViews" id="gBz-Re-WPJ">
                                 <items>
                                     <menuItem title="Reset all" state="on" tag="3" keyEquivalent="r" toolTip="Replace NSMapTable instance with a new one and reset marker count values" id="c7e-XI-edL">
@@ -878,17 +878,48 @@ DQ
                             <action selector="changeTypeOfMapTable:" target="494" id="nnN-e6-39g"/>
                         </connections>
                     </popUpButton>
+                    <textField toolTip="Total entries added so far, since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="lAQ-eX-dfh">
+                        <rect key="frame" x="18" y="194" width="96" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Entries Added:" id="WQg-VD-iLq">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField toolTip="Total entries added so far, since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="W91-5H-QRv">
+                        <rect key="frame" x="114" y="194" width="66" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="vQR-gP-cw6">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button toolTip="Log the calls to `init` and `dealloc`." id="ZHm-d4-I4U">
+                        <rect key="frame" x="267" y="118" width="116" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Log to Console" bezelStyle="regularSquare" imagePosition="left" inset="2" id="X1z-ri-Bpn">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleLog:" target="494" id="lu8-gZ-ylG"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>
         <customObject id="494" customClass="PARAppDelegate">
             <connections>
+                <outlet property="addedField" destination="W91-5H-QRv" id="jQU-QD-Nbx"/>
                 <outlet property="countField" destination="bMz-u0-oZc" id="sEu-Ga-gD3"/>
                 <outlet property="createdField" destination="aTG-iM-jMf" id="RXZ-z5-g3e"/>
                 <outlet property="deallocatedField" destination="tCS-Go-Aiy" id="5uO-iV-rcg"/>
                 <outlet property="entriesToAddField" destination="P2y-ki-78R" id="La4-ka-TB4"/>
                 <outlet property="keyCountField" destination="ZhT-sa-Z5f" id="uZ7-Bv-aMl"/>
                 <outlet property="liveField" destination="BhA-Eu-4Ri" id="iJ2-A5-TQB"/>
+                <outlet property="logCheckBox" destination="ZHm-d4-I4U" id="lsX-Mp-un3"/>
                 <outlet property="mapTableTypeButton" destination="Tz5-UR-Rom" id="xBo-lg-bUn"/>
                 <outlet property="objectCountField" destination="u9i-x1-A52" id="VIs-mT-ftD"/>
                 <outlet property="window" destination="371" id="532"/>

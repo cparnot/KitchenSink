@@ -8,12 +8,14 @@
 
 #pragma mark - Marker Objects
 
+static NSUInteger countAdded = 0;
 static NSUInteger countTotal = 0;
 static NSUInteger countDeallocated = 0;
 static NSHashTable *liveMarkers = nil;
+static BOOL shouldLog = NO;
 
 @interface PARMarker : NSObject
-
+@property NSUInteger markerIndex;
 @end
 
 @implementation PARMarker
@@ -31,8 +33,11 @@ static NSHashTable *liveMarkers = nil;
     self = [super init];
     if (self)
     {
+        self.markerIndex = countTotal;
         [liveMarkers addObject:self];
         countTotal ++;
+        if (shouldLog)
+            printf("+++ %s\n", [[@(self.markerIndex) description] UTF8String]);
     }
     
     return self;
@@ -41,6 +46,8 @@ static NSHashTable *liveMarkers = nil;
 - (void)dealloc
 {
     NSAssert([NSThread currentThread] == [NSThread mainThread], @"Not on the main thread");
+    if (shouldLog)
+        printf("--- %s\n", [[@(self.markerIndex) description] UTF8String]);
     countDeallocated ++;
 }
 
@@ -59,6 +66,7 @@ static NSHashTable *liveMarkers = nil;
 // UI
 @property (weak, nonatomic) IBOutlet NSPopUpButton *mapTableTypeButton;
 
+@property (weak, nonatomic) IBOutlet NSTextField *addedField;
 @property (weak, nonatomic) IBOutlet NSTextField *countField;
 @property (weak, nonatomic) IBOutlet NSTextField *keyCountField;
 @property (weak, nonatomic) IBOutlet NSTextField *objectCountField;
@@ -66,6 +74,7 @@ static NSHashTable *liveMarkers = nil;
 @property (weak, nonatomic) IBOutlet NSTextField *createdField;
 @property (weak, nonatomic) IBOutlet NSTextField *liveField;
 @property (weak, nonatomic) IBOutlet NSTextField *deallocatedField;
+@property (weak, nonatomic) IBOutlet NSButton *logCheckBox;
 
 @property (weak, nonatomic) IBOutlet NSTextField *entriesToAddField;
 
@@ -88,6 +97,7 @@ static NSHashTable *liveMarkers = nil;
 
 - (void)refreshUI
 {
+    self.addedField.stringValue       = [@(countAdded) description];
     self.countField.stringValue       = [@(self.mapTable.count) description];
     self.keyCountField.stringValue    = [@(self.mapTable.keyEnumerator.allObjects.count)    description];
     self.objectCountField.stringValue = [@(self.mapTable.objectEnumerator.allObjects.count) description];
@@ -113,6 +123,8 @@ static NSHashTable *liveMarkers = nil;
         self.mapTable = [NSMapTable strongToStrongObjectsMapTable];
 
     self.mapTableType = type;
+    
+    countAdded = 0;
     
     [self refreshUI];
 }
@@ -160,8 +172,14 @@ static NSHashTable *liveMarkers = nil;
         {
             PARMarker *key = [[PARMarker alloc] init];
             PARMarker *object = [[PARMarker alloc] init];
+            if (shouldLog)
+            {
+                printf("addentry with key: %s\n"
+                       "           object: %s\n", [[@(key.markerIndex) description] UTF8String], [[@(object.markerIndex) description] UTF8String]);
+            }
             [self.mapTable setObject:object forKey:key];
         }
+        countAdded += addCount;
     }
     [self refreshUI];
 }
@@ -169,6 +187,11 @@ static NSHashTable *liveMarkers = nil;
 - (IBAction)refresh:(id)sender
 {
     [self refreshUI];
+}
+
+- (IBAction)toggleLog:(id)sender
+{
+    shouldLog = self.logCheckBox.state == NSOnState ? YES : NO;
 }
 
 @end
