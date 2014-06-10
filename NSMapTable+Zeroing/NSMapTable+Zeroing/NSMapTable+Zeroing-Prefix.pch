@@ -6,4 +6,19 @@
 
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
+
+#define printf(fmt,...)  ({ \
+\
+  id z = [NSString stringWithFormat:@fmt,__VA_ARGS__];\
+\
+  id attr = [NSAttributedString.alloc initWithString:[z copy] attributes:\
+    @{NSFontAttributeName:[NSFont fontWithName:@"AmericanTypewriter" size:15]}];\
+\
+  [PARAppDelegate.console.textStorage appendAttributedString:attr];\
+\
+  [PARAppDelegate.console scrollRangeToVisible:NSMakeRange([PARAppDelegate.console string].length, 0)];\
+\
+  fprintf(stdout,"%s\n", [z UTF8String]); \
+})
+
 #endif

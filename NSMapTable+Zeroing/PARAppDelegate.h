@@ -8,5 +8,8 @@
 @interface PARAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSTextView *console;
+
++ (NSTextView*) console;
 
 @end

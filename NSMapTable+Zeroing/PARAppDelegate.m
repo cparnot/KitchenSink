@@ -8,9 +8,8 @@
 
 #pragma mark - Marker Objects
 
-static NSUInteger countAdded = 0;
-static NSUInteger countTotal = 0;
-static NSUInteger countDeallocated = 0;
+static NSTextView *sharedConsole;
+static NSUInteger countAdded = 0, countTotal = 0, countDeallocated = 0;
 static NSHashTable *liveMarkers = nil;
 static BOOL shouldLog = NO;
 
@@ -65,25 +64,13 @@ static BOOL shouldLog = NO;
 
 // UI
 @property (weak, nonatomic) IBOutlet NSPopUpButton *mapTableTypeButton;
-
-@property (weak, nonatomic) IBOutlet NSTextField *addedField;
-@property (weak, nonatomic) IBOutlet NSTextField *countField;
-@property (weak, nonatomic) IBOutlet NSTextField *keyCountField;
-@property (weak, nonatomic) IBOutlet NSTextField *objectCountField;
-
-@property (weak, nonatomic) IBOutlet NSTextField *createdField;
-@property (weak, nonatomic) IBOutlet NSTextField *liveField;
-@property (weak, nonatomic) IBOutlet NSTextField *deallocatedField;
+@property (weak, nonatomic) IBOutlet NSTextField *addedField, *countField, *keyCountField, *objectCountField, *createdField, *liveField, *deallocatedField, *entriesToAddField;
 @property (weak, nonatomic) IBOutlet NSButton *logCheckBox;
-
-@property (weak, nonatomic) IBOutlet NSTextField *entriesToAddField;
-
-
 @end
 
-
-
 @implementation PARAppDelegate
+
++ (NSTextView*) console { return sharedConsole; }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -92,7 +79,7 @@ static BOOL shouldLog = NO;
 
 - (void)awakeFromNib
 {
-    [self resetAll:self];
+    [self resetAll:self]; if(!sharedConsole) sharedConsole = _console;
 }
 
 - (void)refreshUI
@@ -192,6 +179,9 @@ static BOOL shouldLog = NO;
 - (IBAction)toggleLog:(id)sender
 {
     shouldLog = self.logCheckBox.state == NSOnState ? YES : NO;
+
+
+
 }
 
 @end

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13D45a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -650,269 +650,315 @@
         <window title="NSMapTable+Zeroing" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="313"/>
+            <rect key="contentRect" x="335" y="390" width="716" height="313"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <value key="minSize" type="size" width="480" height="313"/>
             <view key="contentView" id="372">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="313"/>
+                <rect key="frame" x="0.0" y="0.0" width="716" height="313"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" id="P2y-ki-78R">
-                        <rect key="frame" x="355" y="54" width="105" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" title="1" drawsBackground="YES" id="BWA-0Y-ppm">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="apy-6W-Rgx">
-                        <rect key="frame" x="252" y="56" width="96" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Entries to add:" id="D4J-ak-SsZ">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <popUpButton toolTip="Create a new map table and resets all values." verticalHuggingPriority="750" id="Tz5-UR-Rom">
-                        <rect key="frame" x="135" y="269" width="205" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <popUpButtonCell key="cell" type="push" title="Strong to strong" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="4" imageScaling="proportionallyDown" inset="2" selectedItem="eIm-NT-l5m" id="lZW-PR-b6v">
-                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
-                            <menu key="menu" title="OtherViews" id="hyb-Mp-nX9">
-                                <items>
-                                    <menuItem title="Strong to weak" tag="1" keyEquivalent="1" id="MFK-zx-a2A"/>
-                                    <menuItem title="Weak to strong" tag="2" keyEquivalent="2" id="pOf-FW-HVY"/>
-                                    <menuItem title="Weak to weak" tag="3" keyEquivalent="3" id="eNh-k4-dUr"/>
-                                    <menuItem title="Strong to strong" state="on" tag="4" keyEquivalent="4" id="eIm-NT-l5m"/>
-                                </items>
-                            </menu>
-                        </popUpButtonCell>
-                        <connections>
-                            <action selector="changeTypeOfMapTable:" target="494" id="7pz-Ea-HDV"/>
-                        </connections>
-                    </popUpButton>
-                    <textField toolTip="Markers created since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="wCJ-T4-lWA">
-                        <rect key="frame" x="267" y="194" width="58" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Created:" id="Ypf-1Q-eSB">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField toolTip="Markers not deallocated yet." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ccq-5k-W4W">
-                        <rect key="frame" x="267" y="169" width="60" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Still Live:" id="qd7-ES-p2H">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField toolTip="Markers deallocated since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="oyN-fQ-Vv8">
-                        <rect key="frame" x="267" y="144" width="82" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Deallocated:" id="sD5-zv-DCB">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField toolTip="Markers not deallocated yet." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="BhA-Eu-4Ri">
-                        <rect key="frame" x="353" y="169" width="96" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="g60-h0-x4l">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField toolTip="Markers deallocated since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="tCS-Go-Aiy">
-                        <rect key="frame" x="353" y="144" width="96" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="wxi-yj-7HK">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <button toolTip="Add new autoreleased markers as keys and objects to the current map table." verticalHuggingPriority="750" id="wjo-6t-XjY">
-                        <rect key="frame" x="318" y="13" width="148" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="Add Entries" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dkg-cI-csi">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                            <string key="keyEquivalent" base64-UTF8="YES">
+                    <splitView dividerStyle="paneSplitter" vertical="YES" id="2K7-sv-G6R">
+                        <rect key="frame" x="-1" y="0.0" width="731" height="313"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <customView id="e3N-NA-P4i">
+                                <rect key="frame" x="0.0" y="0.0" width="481" height="313"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" id="P2y-ki-78R">
+                                        <rect key="frame" x="356" y="54" width="105" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" title="1" drawsBackground="YES" id="BWA-0Y-ppm">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="apy-6W-Rgx">
+                                        <rect key="frame" x="253" y="56" width="96" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Entries to add:" id="D4J-ak-SsZ">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <popUpButton toolTip="Create a new map table and resets all values." verticalHuggingPriority="750" id="Tz5-UR-Rom">
+                                        <rect key="frame" x="136" y="269" width="205" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <popUpButtonCell key="cell" type="push" title="Strong to strong" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="4" imageScaling="proportionallyDown" inset="2" selectedItem="eIm-NT-l5m" id="lZW-PR-b6v">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="menu"/>
+                                            <menu key="menu" title="OtherViews" id="hyb-Mp-nX9">
+                                                <items>
+                                                    <menuItem title="Strong to weak" tag="1" keyEquivalent="1" id="MFK-zx-a2A"/>
+                                                    <menuItem title="Weak to strong" tag="2" keyEquivalent="2" id="pOf-FW-HVY"/>
+                                                    <menuItem title="Weak to weak" tag="3" keyEquivalent="3" id="eNh-k4-dUr"/>
+                                                    <menuItem title="Strong to strong" state="on" tag="4" keyEquivalent="4" id="eIm-NT-l5m"/>
+                                                </items>
+                                            </menu>
+                                        </popUpButtonCell>
+                                        <connections>
+                                            <action selector="changeTypeOfMapTable:" target="494" id="7pz-Ea-HDV"/>
+                                        </connections>
+                                    </popUpButton>
+                                    <textField toolTip="Markers created since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="wCJ-T4-lWA">
+                                        <rect key="frame" x="268" y="194" width="58" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Created:" id="Ypf-1Q-eSB">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="Markers not deallocated yet." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ccq-5k-W4W">
+                                        <rect key="frame" x="268" y="169" width="60" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Still Live:" id="qd7-ES-p2H">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="Markers deallocated since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="oyN-fQ-Vv8">
+                                        <rect key="frame" x="268" y="144" width="82" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Deallocated:" id="sD5-zv-DCB">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="Markers not deallocated yet." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="BhA-Eu-4Ri">
+                                        <rect key="frame" x="354" y="169" width="96" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="g60-h0-x4l">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="Markers deallocated since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="tCS-Go-Aiy">
+                                        <rect key="frame" x="354" y="144" width="96" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="wxi-yj-7HK">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button toolTip="Add new autoreleased markers as keys and objects to the current map table." verticalHuggingPriority="750" id="wjo-6t-XjY">
+                                        <rect key="frame" x="319" y="13" width="148" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Add Entries" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dkg-cI-csi">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
-                        </buttonCell>
-                        <connections>
-                            <action selector="addEntriesToMapTable:" target="494" id="3Fs-YE-vbF"/>
-                        </connections>
-                    </button>
-                    <textField toolTip="Markers created since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="aTG-iM-jMf">
-                        <rect key="frame" x="353" y="194" width="96" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="XVo-dd-UK4">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField toolTip="Create a new map table and resets all values." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ucd-y0-HoK">
-                        <rect key="frame" x="17" y="275" width="114" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Map Table Type:" id="jtl-AZ-GkI">
-                            <font key="font" metaFont="systemBold"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField toolTip="mapTable.keyEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="D8f-kE-cTe">
-                        <rect key="frame" x="18" y="144" width="73" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Key Count:" id="3Tk-tV-eUW">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField toolTip="mapTable.ObjectEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="q3U-A5-evc">
-                        <rect key="frame" x="18" y="119" width="92" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Object Count:" id="lMR-qD-tAr">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField toolTip="mapTable.keyEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ZhT-sa-Z5f">
-                        <rect key="frame" x="114" y="144" width="66" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="mQf-JJ-BPP">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField toolTip="mapTable.ObjectEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="u9i-x1-A52">
-                        <rect key="frame" x="114" y="119" width="66" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="3ng-Ir-zDr">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField toolTip="mapTable.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bMz-u0-oZc">
-                        <rect key="frame" x="114" y="169" width="66" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="ek9-gP-VzA">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField toolTip="mapTable.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Sfp-84-KPl">
-                        <rect key="frame" x="18" y="169" width="83" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Entry Count:" id="uIf-Mn-WEn">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="nm3-RI-FDS">
-                        <rect key="frame" x="17" y="219" width="134" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Map Table Content:" id="qpU-Vj-Gw7">
-                            <font key="font" metaFont="systemBold"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField toolTip="Markers are instances used as keys and objects of the map table, for which we keep track of initializations and deallocations." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="nFu-aX-d6d">
-                        <rect key="frame" x="267" y="219" width="62" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Markers:" id="ehS-hg-0AB">
-                            <font key="font" metaFont="systemBold"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <popUpButton toolTip="Create a new map table and resets all values." verticalHuggingPriority="750" id="GpJ-g8-SjN">
-                        <rect key="frame" x="17" y="17" width="241" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <popUpButtonCell key="cell" type="push" title="Reset all" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="3" imageScaling="proportionallyDown" inset="2" selectedItem="c7e-XI-edL" id="qAQ-qB-RGI">
-                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
-                            <menu key="menu" title="OtherViews" id="gBz-Re-WPJ">
-                                <items>
-                                    <menuItem title="Reset all" state="on" tag="3" keyEquivalent="r" toolTip="Replace NSMapTable instance with a new one and reset marker count values" id="c7e-XI-edL">
+                                        </buttonCell>
                                         <connections>
-                                            <action selector="resetAll:" target="494" id="Xes-8P-It8"/>
+                                            <action selector="addEntriesToMapTable:" target="494" id="3Fs-YE-vbF"/>
                                         </connections>
-                                    </menuItem>
-                                    <menuItem title="Replace map table with new one" tag="1" keyEquivalent="n" toolTip="Replace NSMapTable instance with a new one, so the old one is deallocated" id="BRt-uk-fRG">
+                                    </button>
+                                    <textField toolTip="Markers created since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="aTG-iM-jMf">
+                                        <rect key="frame" x="354" y="194" width="96" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="XVo-dd-UK4">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="Create a new map table and resets all values." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ucd-y0-HoK">
+                                        <rect key="frame" x="18" y="275" width="114" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Map Table Type:" id="jtl-AZ-GkI">
+                                            <font key="font" metaFont="systemBold"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="mapTable.keyEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="D8f-kE-cTe">
+                                        <rect key="frame" x="19" y="144" width="73" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Key Count:" id="3Tk-tV-eUW">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="mapTable.ObjectEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="q3U-A5-evc">
+                                        <rect key="frame" x="19" y="119" width="92" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Object Count:" id="lMR-qD-tAr">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="mapTable.keyEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ZhT-sa-Z5f">
+                                        <rect key="frame" x="115" y="144" width="66" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="mQf-JJ-BPP">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="mapTable.ObjectEnumerator.allObjects.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="u9i-x1-A52">
+                                        <rect key="frame" x="115" y="119" width="66" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="3ng-Ir-zDr">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="mapTable.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bMz-u0-oZc">
+                                        <rect key="frame" x="115" y="169" width="66" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="ek9-gP-VzA">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="mapTable.count" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Sfp-84-KPl">
+                                        <rect key="frame" x="19" y="169" width="83" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Entry Count:" id="uIf-Mn-WEn">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="nm3-RI-FDS">
+                                        <rect key="frame" x="18" y="219" width="134" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Map Table Content:" id="qpU-Vj-Gw7">
+                                            <font key="font" metaFont="systemBold"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="Markers are instances used as keys and objects of the map table, for which we keep track of initializations and deallocations." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="nFu-aX-d6d">
+                                        <rect key="frame" x="268" y="219" width="62" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Markers:" id="ehS-hg-0AB">
+                                            <font key="font" metaFont="systemBold"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <popUpButton toolTip="Create a new map table and resets all values." verticalHuggingPriority="750" id="GpJ-g8-SjN">
+                                        <rect key="frame" x="18" y="17" width="241" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <popUpButtonCell key="cell" type="push" title="Reset all" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="3" imageScaling="proportionallyDown" inset="2" selectedItem="c7e-XI-edL" id="qAQ-qB-RGI">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="menu"/>
+                                            <menu key="menu" title="OtherViews" id="gBz-Re-WPJ">
+                                                <items>
+                                                    <menuItem title="Reset all" state="on" tag="3" keyEquivalent="r" toolTip="Replace NSMapTable instance with a new one and reset marker count values" id="c7e-XI-edL">
+                                                        <connections>
+                                                            <action selector="resetAll:" target="494" id="Xes-8P-It8"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Replace map table with new one" tag="1" keyEquivalent="n" toolTip="Replace NSMapTable instance with a new one, so the old one is deallocated" id="BRt-uk-fRG">
+                                                        <connections>
+                                                            <action selector="mapTableReplace:" target="494" id="SPB-Lk-fVs"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Remove all objects from map table" tag="2" keyEquivalent="m" toolTip="[mapTable removeAllObjects]" id="VuH-0Q-T0O">
+                                                        <connections>
+                                                            <action selector="mapTableRemoveAllObjects:" target="494" id="sPG-Yl-3X3"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Remove objects for live keys" tag="3" keyEquivalent="k" toolTip="[mapTable removeObject:forKey:]" id="7NY-1b-3Eq">
+                                                        <connections>
+                                                            <action selector="mapTableRemoveObjectsForLiveKeys:" target="494" id="9ik-5B-oSH"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </popUpButtonCell>
                                         <connections>
-                                            <action selector="mapTableReplace:" target="494" id="SPB-Lk-fVs"/>
+                                            <action selector="changeTypeOfMapTable:" target="494" id="nnN-e6-39g"/>
                                         </connections>
-                                    </menuItem>
-                                    <menuItem title="Remove all objects from map table" tag="2" keyEquivalent="m" toolTip="[mapTable removeAllObjects]" id="VuH-0Q-T0O">
+                                    </popUpButton>
+                                    <textField toolTip="Total entries added so far, since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="lAQ-eX-dfh">
+                                        <rect key="frame" x="19" y="194" width="96" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Entries Added:" id="WQg-VD-iLq">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="Total entries added so far, since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="W91-5H-QRv">
+                                        <rect key="frame" x="115" y="194" width="66" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="vQR-gP-cw6">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button toolTip="Log the calls to `init` and `dealloc`." id="ZHm-d4-I4U">
+                                        <rect key="frame" x="268" y="118" width="116" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                                        <buttonCell key="cell" type="check" title="Log to Console" bezelStyle="regularSquare" imagePosition="left" inset="2" id="X1z-ri-Bpn">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
                                         <connections>
-                                            <action selector="mapTableRemoveAllObjects:" target="494" id="sPG-Yl-3X3"/>
+                                            <action selector="toggleLog:" target="494" id="lu8-gZ-ylG"/>
                                         </connections>
-                                    </menuItem>
-                                    <menuItem title="Remove objects for live keys" tag="3" keyEquivalent="k" toolTip="[mapTable removeObject:forKey:]" id="7NY-1b-3Eq">
-                                        <connections>
-                                            <action selector="mapTableRemoveObjectsForLiveKeys:" target="494" id="9ik-5B-oSH"/>
-                                        </connections>
-                                    </menuItem>
-                                </items>
-                            </menu>
-                        </popUpButtonCell>
-                        <connections>
-                            <action selector="changeTypeOfMapTable:" target="494" id="nnN-e6-39g"/>
-                        </connections>
-                    </popUpButton>
-                    <textField toolTip="Total entries added so far, since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="lAQ-eX-dfh">
-                        <rect key="frame" x="18" y="194" width="96" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Entries Added:" id="WQg-VD-iLq">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField toolTip="Total entries added so far, since the last reset." horizontalHuggingPriority="251" verticalHuggingPriority="750" id="W91-5H-QRv">
-                        <rect key="frame" x="114" y="194" width="66" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="vQR-gP-cw6">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <button toolTip="Log the calls to `init` and `dealloc`." id="ZHm-d4-I4U">
-                        <rect key="frame" x="267" y="118" width="116" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Log to Console" bezelStyle="regularSquare" imagePosition="left" inset="2" id="X1z-ri-Bpn">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="toggleLog:" target="494" id="lu8-gZ-ylG"/>
-                        </connections>
-                    </button>
+                                    </button>
+                                </subviews>
+                            </customView>
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="SPy-U7-8hb">
+                                <rect key="frame" x="491" y="0.0" width="240" height="313"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <clipView key="contentView" id="U0s-dZ-JDr">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="313"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView drawsBackground="NO" importsGraphics="NO" richText="NO" horizontallyResizable="YES" findStyle="panel" allowsDocumentBackgroundColorChange="YES" fieldEditor="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="wV8-b3-BMR">
+                                            <rect key="frame" x="0.0" y="0.0" width="499" height="304"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="499" height="304"/>
+                                            <size key="maxSize" width="2000" height="10000000"/>
+                                            <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="499" height="304"/>
+                                            <size key="maxSize" width="2000" height="10000000"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.87296540392110877" green="0.89554768799999995" blue="0.86819160261874273" alpha="1" colorSpace="calibratedRGB"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="XfX-Ge-ItG">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="KbJ-UT-MxO">
+                                    <rect key="frame" x="223" y="1" width="16" height="311"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <holdingPriorities>
+                            <real value="250"/>
+                            <real value="250"/>
+                        </holdingPriorities>
+                    </splitView>
                 </subviews>
             </view>
         </window>
         <customObject id="494" customClass="PARAppDelegate">
             <connections>
                 <outlet property="addedField" destination="W91-5H-QRv" id="jQU-QD-Nbx"/>
+                <outlet property="console" destination="wV8-b3-BMR" id="KGv-TQ-mjW"/>
                 <outlet property="countField" destination="bMz-u0-oZc" id="sEu-Ga-gD3"/>
                 <outlet property="createdField" destination="aTG-iM-jMf" id="RXZ-z5-g3e"/>
                 <outlet property="deallocatedField" destination="tCS-Go-Aiy" id="5uO-iV-rcg"/>
